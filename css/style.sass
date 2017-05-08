@@ -11,7 +11,9 @@ $lightgrey: #D0CEBA
 $pinky: #E9D2C0
 
 .backgroundheight
-  height: 500px
+  height: 600px
+  overflow: hidden
+  position: relative
 
 *
   box-sizing: border-box
@@ -20,9 +22,10 @@ body
   padding: 0
   margin: 0
 
-h1
+h1,h2,h3,h4
   letter-spacing: 1px
   margin-bottom: 40px
+  font-family: $fonts1
 
 h2, p 
   line-height: 30px
@@ -174,6 +177,8 @@ h2, p
 .info
   background: $pinky
   padding: 100px 0
+  h3
+    font-family: $fonts1
   span
     padding: 50px 0 0
 
@@ -186,10 +191,7 @@ h2, p
 .top-left 
   background: url('../img/fruits1.jpeg')
   @extend .backgroundheight
-  background-size: cover
   background-position: center
-  overflow: hidden
-  position: relative
 
 .top-right 
   background: $lightviolet
@@ -200,19 +202,13 @@ h2, p
 .middle-right
   background: url('../img/fruits2.jpg')
   @extend .backgroundheight
-  background-size: cover
   background-position: center
-  overflow: hidden
-  position: relative
 
 .bottom-left 
   background: url('../img/fruits3.jpeg')
-  @extend .backgroundheight
-  background-size: cover
-  background-position: right
-  overflow: hidden
-  position: relative
 
+  @extend .backgroundheight
+  background-position: center
 .bottom-right
   background: $pinky
   @extend .backgroundheight
@@ -250,6 +246,9 @@ h2, p
   background: $lightgrey
   color: $green
   padding-bottom: 50px
+  .col-3
+    float: none
+    margin: 0 auto
   h2
     margin-top: 0
     text-align: center
@@ -286,7 +285,7 @@ h2, p
 footer
   background: $green
   padding: 15px 0 
-  p 
+  h4 
     padding: 0
     margin: 0
     text-align: center

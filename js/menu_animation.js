@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  /* Push the body and the nav over by 285px over */
+  /* Push the .menu by 285px over */
   $('.fa-bars').click(function() {
     $('.menu').animate({
       right: "0px"
     }, 200);
   });
-  /* Then push them back */
+  /* Then push it back */
   $('.icon-close').click(function() {
     $('.menu').animate({
       right: "-285px"

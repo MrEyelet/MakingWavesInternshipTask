@@ -3,7 +3,9 @@
 /*Fonts */
 /*colors */
 .backgroundheight, .top-left, .top-right, .middle-right, .bottom-left, .bottom-right {
-  height: 500px; }
+  height: 600px;
+  overflow: hidden;
+  position: relative; }
 
 * {
   box-sizing: border-box; }
@@ -12,9 +14,10 @@ body {
   padding: 0;
   margin: 0; }
 
-h1 {
+h1, h2, h3, h4 {
   letter-spacing: 1px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  font-family: "Open Sans Condensed", sans-serif; }
 
 h2, p {
   line-height: 30px;
@@ -178,6 +181,8 @@ h2, p {
 .info {
   background: #E9D2C0;
   padding: 100px 0; }
+  .info h3 {
+    font-family: "Open Sans Condensed", sans-serif; }
   .info span {
     padding: 50px 0 0; }
 
@@ -189,10 +194,7 @@ h2, p {
 
 .top-left {
   background: url("../img/fruits1.jpeg");
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  position: relative; }
+  background-position: center; }
 
 .top-right {
   background: #4B3F72; }
@@ -201,17 +203,11 @@ h2, p {
 
 .middle-right {
   background: url("../img/fruits2.jpg");
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  position: relative; }
+  background-position: center; }
 
 .bottom-left {
   background: url("../img/fruits3.jpeg");
-  background-size: cover;
-  background-position: right;
-  overflow: hidden;
-  position: relative; }
+  background-position: center; }
 
 .bottom-right {
   background: #E9D2C0; }
@@ -249,6 +245,9 @@ h2, p {
   background: #D0CEBA;
   color: #417B5A;
   padding-bottom: 50px; }
+  .form .col-3 {
+    float: none;
+    margin: 0 auto; }
   .form h2 {
     margin-top: 0;
     text-align: center;
@@ -285,7 +284,7 @@ h2, p {
 footer {
   background: #417B5A;
   padding: 15px 0; }
-  footer p {
+  footer h4 {
     padding: 0;
     margin: 0;
     text-align: center;
