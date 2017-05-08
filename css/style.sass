@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700')
+@import url('https://fonts.googleapis.com/css?family=Handlee|Open+Sans+Condensed:300,700&subset=latin-ext')
+/*Fonts*/
+$fonts1: 'Open Sans Condensed', sans-serif
+$fonts2: 'Handlee', cursive
+/*colors*/
+$white: #fff
+$lightviolet: #4B3F72
+$green: #417B5A
+$lightgrey: #D0CEBA
+$pinky: #E9D2C0
+
+.backgroundheight
+  height: 500px
+
+*
+  box-sizing: border-box
+
+body 
+  padding: 0
+  margin: 0
+
+h1
+  letter-spacing: 1px
+  margin-bottom: 40px
+
+h2, p 
+  line-height: 30px
+  letter-spacing: 1px
+  font-size: 20px
+  font-family: $fonts1
+  color: $green
+  padding: 25px
+/*START GRID */
+.container
+  width: 100%
+  max-width: 1200px
+  margin: 0 auto
+
+.container-fluid
+  width: 100%
+  margin: 0 auto
+
+.clearfix::before,
+.clearfix::after 
+  content: " "
+  display: table
+  clear: both
+
+[class*="col-"]
+  float: left
+  min-height: 1px
+  padding: 12px
+
+.col-1
+  width: 8.33%
+.col-2
+  width: 16.66%
+.col-3
+  width: 25%
+.col-4
+  width: 33.33%
+.col-5
+  width: 41.66%
+.col-6
+  width: 50%
+.col-7
+  width: 58.33%
+.col-8
+  width: 66.66%
+.col-9
+  width: 75%
+.col-10
+  width: 83.33%
+.col-11
+  width: 91.66%
+.col-12
+  width: 100%
+
+/* Initial menu */
+.menu
+  background: $green
+  right: -285px 
+  height: 100%
+  position: fixed
+  z-index: 1000
+  width: 285px
+  ul
+    border-top: 1px solid $lightgrey
+    list-style: none
+    margin: 0
+    padding: 0
+    li 
+      border-bottom: 1px solid $lightgrey
+      font-family: $fonts1
+      line-height: 45px
+      padding-bottom: 3px
+      padding-left: 20px
+      padding-top: 3px
+      a 
+        display: block
+        color: $lightgrey
+        font-size: 25px
+        text-decoration: none
+        text-transform: uppercase
+  .social
+    text-align: center
+    padding: 25px
+    a 
+      color: $pinky
+    span 
+      padding-right: 20px
+      transition: .5s
+      &:hover
+        opacity: .7
+
+.jumbotron 
+  background: url('../img/smoothie.jpg')
+  height: 100vh
+  min-height: 550px
+  background-size: cover
+  background-position: center
+  overflow: hidden
+  img 
+    float: left
+    cursor: pointer
+  h1 
+    margin: 0 0 0 25px
+    float: left
+    line-height: 110px
+    font-family: $fonts2
+    cursor: pointer
+    font-weight: 700
+    color: $green
+
+.hero 
+  background: rgba(65, 123, 90, .5)
+  padding: 25px
+  position: absolute
+  left: 50px
+  bottom: 25px
+  font-family: $fonts1
+  font-size: 35px
+  p 
+    color: $pinky
+
+.icon-menu 
+  text-align: left
+  width: 100%
+  height: 100px
+  background: rgb(0,0,0) /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 48%, rgba(113,37,122,1) 48%) /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 48%,rgba(113,37,122,1) 48%) /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(255,255,255,1) 48%,rgba(113,37,122,1) 48%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#71257a',GradientType=1 ) /* IE6-9 fallback on horizontal gradient */
+  color: #5E08AD
+  font-family: $fonts1
+  font-size: 16px
+  padding: 0 25px
+  position: fixed
+  z-index: 50
+  span 
+    margin-right: 55px
+    float: right
+    line-height: 100px
+    color: $white
+    cursor: pointer
+    
+.icon-close 
+  cursor: pointer
+  padding: 15px
+  color: $lightgrey
+
+.info
+  background: $pinky
+  padding: 100px 0
+  span
+    padding: 50px 0 0
+
+.about 
+  float: none
+  margin: 0 auto
+  color: $green
+  text-align: center
+  
+.top-left 
+  background: url('../img/fruits1.jpeg')
+  @extend .backgroundheight
+  background-size: cover
+  background-position: center
+  overflow: hidden
+  position: relative
+
+.top-right 
+  background: $lightviolet
+  @extend .backgroundheight
+  h2, p 
+    color: $pinky
+
+.middle-right
+  background: url('../img/fruits2.jpg')
+  @extend .backgroundheight
+  background-size: cover
+  background-position: center
+  overflow: hidden
+  position: relative
+
+.bottom-left 
+  background: url('../img/fruits3.jpeg')
+  @extend .backgroundheight
+  background-size: cover
+  background-position: right
+  overflow: hidden
+  position: relative
+
+.bottom-right
+  background: $pinky
+  @extend .backgroundheight
+  h2, p 
+    color: $lightviolet
+
+.layer
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  transition: .5s
+  font-family: $fonts1
+  .fa
+    opacity: 0
+    color: $pinky
+    transition: .5s
+    position: relative
+    text-align: center
+    left: 50%
+    transform: translateX(-50%)
+    top: 45%
+    i 
+      margin: 0
+      padding: 0
+      color: $pinky
+  &:hover
+    background: rgba(65, 123, 90, .4)
+    cursor: pointer
+  &:hover .fa
+    opacity: 1
+
+.form
+  background: $lightgrey
+  color: $green
+  padding-bottom: 50px
+  h2
+    margin-top: 0
+    text-align: center
+    font-family: $fonts1
+    padding: 100px 0 50px
+  label
+    text-transform: uppercase
+    font-family: $fonts1
+    font-size: 25px
+  input 
+    width: 100%
+    border: 2px solid $green
+    padding: 24px 0
+    background: none
+    font-family: $fonts1
+    color: $green
+    font-size: 25px
+  textarea
+    width: 100%
+    font-size: 40px
+    font-family: $fonts1
+    background: none
+    color: $green
+    border: 2px solid $green
+  .button
+    color: $pinky
+    background: $green
+    transition: .5s
+    &:hover
+      background: none
+      color: $green
+      cursor: pointer
+
+footer
+  background: $green
+  padding: 15px 0 
+  p 
+    padding: 0
+    margin: 0
+    text-align: center
+    color: $pinky
+
+
+/*Media queries*/
+
+@media(max-width: 768px)
+  .col-m-1 
+    width: 8.33%
+  .col-m-2 
+    width: 16.66%
+  .col-m-3 
+    width: 25%
+  .col-m-4 
+    width: 33.33%
+  .col-m-5 
+    width: 41.66%
+  .col-m-6 
+    width: 50%
+  .col-m-7 
+    width: 58.33%
+  .col-m-8 
+    width: 66.66%
+  .col-m-9 
+    width: 75%
+  .col-m-10 
+    width: 83.33%
+  .col-m-11 
+    width: 91.66%
+  .col-m-12 
+    width: 100%
+
+  .hero
+    left: 50%
+    transform: translateX(-50%)
+
+@media(max-width: 480px)
+  .col-s-1 
+    width: 8.33%
+  .col-s-2 
+    width: 16.66%
+  .col-s-3 
+    width: 25%
+  .col-s-4 
+    width: 33.33%
+  .col-s-5 
+    width: 41.66%
+  .col-s-6 
+    width: 50%
+  .col-s-7 
+    width: 58.33%
+  .col-s-8 
+    width: 66.66%
+  .col-s-9 
+    width: 75%
+  .col-s-10 
+    width: 83.33%
+  .col-s-11 
+    width: 91.66%
+  .col-s-12 
+    width: 100%
+
+  .jumbotron
+    h1
+      display: none
+  .hero
+    width: 100%
