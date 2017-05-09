@@ -15,6 +15,20 @@ $pinky: #E9D2C0
   overflow: hidden
   position: relative
 
+=transition($trans)
+  -webkit-transition: ($trans)
+  transition:         ($trans)
+
+=transform1($translate)
+  -ms-transform:        ($translate)
+  -webkit-transform:    ($translate)
+  transform:            ($translate)
+
+=transform2($rotate)
+  -ms-transform:        ($rotate)
+  -webkit-transform:    ($rotate)
+  transform:            ($rotate)
+
 *
   box-sizing: border-box
 
@@ -106,6 +120,7 @@ h2, p
         font-size: 25px
         text-decoration: none
         text-transform: uppercase
+  /*SOCIAL*/
   .social
     text-align: center
     padding: 25px
@@ -113,7 +128,7 @@ h2, p
       color: $pinky
     span 
       padding-right: 20px
-      transition: .5s
+      +transition(.5s)
       &:hover
         opacity: .7
 
@@ -168,6 +183,9 @@ h2, p
     line-height: 100px
     color: $white
     cursor: pointer
+    &:hover
+      +transition(.5s)
+      +transform2(rotate(90deg))
     
 .icon-close 
   cursor: pointer
@@ -226,11 +244,11 @@ h2, p
   .fa
     opacity: 0
     color: $pinky
-    transition: .5s
+    +transition(.5s)
     position: relative
     text-align: center
     left: 50%
-    transform: translateX(-50%)
+    +transform1(translateX(-50%))
     top: 45%
     i 
       margin: 0
@@ -276,7 +294,7 @@ h2, p
   .button
     color: $pinky
     background: $green
-    transition: .5s
+    +transition(.5s)
     &:hover
       background: none
       color: $green
@@ -322,7 +340,7 @@ footer
 
   .hero
     left: 50%
-    transform: translateX(-50%)
+    +transform1(translateX(-50%))
 
 @media(max-width: 480px)
   .col-s-1 

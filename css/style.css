@@ -91,7 +91,8 @@ h2, p {
   height: 100%;
   position: fixed;
   z-index: 1000;
-  width: 285px; }
+  width: 285px;
+  /*SOCIAL */ }
   .menu ul {
     border-top: 1px solid #D0CEBA;
     list-style: none;
@@ -117,6 +118,7 @@ h2, p {
       color: #E9D2C0; }
     .menu .social span {
       padding-right: 20px;
+      -webkit-transition: 0.5s;
       transition: 0.5s; }
       .menu .social span:hover {
         opacity: 0.7; }
@@ -172,6 +174,12 @@ h2, p {
     line-height: 100px;
     color: #fff;
     cursor: pointer; }
+    .icon-menu span:hover {
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      -ms-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); }
 
 .icon-close {
   cursor: pointer;
@@ -225,10 +233,13 @@ h2, p {
   .layer .fa {
     opacity: 0;
     color: #E9D2C0;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     position: relative;
     text-align: center;
     left: 50%;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     top: 45%; }
     .layer .fa i {
@@ -275,6 +286,7 @@ h2, p {
   .form .button {
     color: #E9D2C0;
     background: #417B5A;
+    -webkit-transition: 0.5s;
     transition: 0.5s; }
     .form .button:hover {
       background: none;
@@ -330,6 +342,8 @@ footer {
 
   .hero {
     left: 50%;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%); } }
 @media(max-width: 480px) {
   .col-s-1 {
